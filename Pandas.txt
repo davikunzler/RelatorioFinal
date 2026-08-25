@@ -1,0 +1,59 @@
+Importação e Exportação
+
+import pandas as pd
+
+df = pd.read_(tipo do arquivo)('nome do arquivo')
+
+Carregue e salve dados em diferentes formatos.
+
+pd.read_csv('arquivo.csv'): Lê um arquivo CSV para um DataFrame.
+
+pd.read_excel('arquivo.xlsx'): Lê uma planilha Excel.
+
+df.to_csv('saida.csv', index=False): Exporta o DataFrame para CSV, ignorando os índices das linhas.
+
+df.to_excel('saida.xlsx'): Exporta o DataFrame para um arquivo Excel.
+
+-------------------------------------------
+
+Exploração e Visualização
+
+df.head(): Exibe as 5 primeiras linhas do DataFrame.
+
+df.tail(): Exibe as 5 últimas linhas do DataFrame.
+
+df.shape: Retorna uma tupla com a quantidade de linhas e colunas, no formato (linhas, colunas).
+
+df.columns: Retorna uma lista com os nomes de todas as colunas.
+
+df.info(): Mostra os tipos de dados de cada coluna e a quantidade de valores não nulos.
+
+df.describe(): Exibe estatísticas descritivas das colunas numéricas (média, desvio padrão, mínimo, máximo, etc.).
+
+df['coluna'].value_counts(): Conta a ocorrência de cada valor único em uma coluna.
+
+---------------------------------------------
+
+Manipulação de Dados
+
+df['coluna']: Seleciona uma coluna específica como uma Series.
+
+df[['coluna1', 'coluna2']]: Seleciona múltiplas colunas como um novo DataFrame.
+
+df[df['coluna'] > 10]: Filtra o DataFrame mantendo apenas as linhas onde a condição é verdadeira.
+
+df.drop('coluna', axis=1): Remove uma coluna específica (use axis=0 para remover linhas).
+
+df.dropna(): Remove todas as linhas que possuem valores vazios (NaN).
+
+df.fillna(valor): Preenche todos os valores vazios (NaN) com o valor especificado.
+
+
+
+---------------------------------
+
+Agrupamento e Ordenação
+
+df.groupby('coluna').mean(): Agrupa os dados por uma coluna e calcula a média para as outras colunas.
+
+df.sort_values(by='coluna', ascending=False): Ordena o DataFrame com base nos valores de uma coluna (em ordem decrescente, neste caso)
